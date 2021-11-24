@@ -16,6 +16,7 @@ zero.classList.add('zero');
 zero.id = 0;
 zero.textContent += 0;
 numPad.appendChild(zero);
+
 }
 numCreate();
 
