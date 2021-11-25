@@ -117,19 +117,11 @@ function makeVal1() {
     val1.textContent = var1;
 }
 
-
-
-
-
-
-
-
-
-
-
 function totalEm() {
     if (var1 == 0) {
         alert('enter a number higher than zero');
+    } else if (var2 == 0 && divi == true){
+        alert('you really shouldn\'t divide by zero...')
     } else {
         val2 = document.querySelector('.display');
         var2 = document.querySelector('.display').childNodes[0].nodeValue;
@@ -138,12 +130,16 @@ function totalEm() {
         let totaled = 0;
         if (divi == true) {
             totaled = var1 / var2;
+            divi = !divi;
         } else if (multi == true) {
              totaled = var1 * var2;
+             multi = !multi;
         } else if (sub == true) {
              totaled = var1 - var2;
+             sub = !sub;
         } else if (add == true) {
             totaled = var1 + var2;
+            add = !add;
         }
         resetEm();
         const newTotal = document.querySelector('.display');
